@@ -30,10 +30,10 @@ cordova plugin add https://github.com/manueldeveloper/cordova-plugin-speech-reco
 
 You can access to this plugin through `navigator.speechrecognizer` and then, you can call to the `recognize` method which has the following parameters:
 
-- __successCallback__: Callback which will be called when the recognition service ends providing the results as _(JSONArray)_
+- __successCallback__: Callback which will be called when the recognition service ends providing the results as _JSONArray_
 - __failCallback__: Callback which will be called when the recognition service detects a problem with its code error as _(String)_
-- __maxResults__: _(Integer)_ with the maximum number of results to provide
-- __promptMessage__: _(String)_ with a minimum title to show through the user interface
+- __maxResults__: _Integer_ with the maximum number of results to provide
+- __promptMessage__: _String_ with a minimum title to show through the user interface
 
 ### Supported Platforms
 
