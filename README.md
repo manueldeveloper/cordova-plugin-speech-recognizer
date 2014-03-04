@@ -24,7 +24,8 @@ Cordova plugin which will provide a speech recognition service for PhoneGap appl
 
 ## Installation
 
-cordova plugin add https://github.com/manueldeveloper/cordova-plugin-speech-recognizer.git
+`cordova plugin add https://github.com/manueldeveloper/cordova-plugin-speech-recognizer.git`
+`cordova plugin add com.manueldeveloper.speech-recognizer`
 
 ## Use
 
