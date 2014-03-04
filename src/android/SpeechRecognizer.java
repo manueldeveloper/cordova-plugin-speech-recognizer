@@ -49,17 +49,9 @@ public class SpeechRecognizer extends CordovaPlugin {
 		maxResults= 1;
 	}
 	
-	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException{
-		
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException{		
 		// Check action
 		if( action.equals("recognize") ){
-			
-			// Check if the device is recognizing some speech
-			if( this.speechRecognizerCallbackContext != null ){
-				callbackContext.error("The device is recognizing some speech");
-				return true;
-			}
-			
 			// Get the reference to the callbacks and parameters
 			this.speechRecognizerCallbackContext= callbackContext;
 			if( args.length() > 0 ){
@@ -78,7 +70,9 @@ public class SpeechRecognizer extends CordovaPlugin {
 			recognizerIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, maxResults);
 			if( promptMessage != null )
 				recognizerIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, promptMessage);
-			this.cordova.getActivity().startActivityForResult(recognizerIntent, REQUEST_CODE);
+			cordova.startActivityForResult(this, recognizerIntent, REQUEST_CODE);
+			
+			return true;
 		}
 		
 		return false;
