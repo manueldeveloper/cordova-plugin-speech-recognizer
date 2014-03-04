@@ -30,10 +30,10 @@ cordova plugin add https://github.com/manueldeveloper/cordova-plugin-speech-reco
 
 You can access to this plugin through `navigator.speechrecognizer` and then, you can call to the `recognize` method which has the following parameters:
 
-- __successCallback__: Callback which will be called when the recognition service ends providing the results as JSONArray
-- __failCallback__: Callback which will be called when the recognition service detects a problem with its code error as String
-- __maxResults__: Integer with the maximum number of results to provide
-- __promptMessage__: String with a minimum title to show through the user interface
+- __successCallback__: Callback which will be called when the recognition service ends providing the results as _(JSONArray)_
+- __failCallback__: Callback which will be called when the recognition service detects a problem with its code error as _(String)_
+- __maxResults__: _(Integer)_ with the maximum number of results to provide
+- __promptMessage__: _(String)_ with a minimum title to show through the user interface
 
 ### Supported Platforms
 
@@ -42,12 +42,12 @@ You can access to this plugin through `navigator.speechrecognizer` and then, you
 
 ### Example
 
-navigator.speechrecognizer.recognize(successCallback, failCallback, 5, "Cordova Speech Recognizer Plugin");
-
-function successCallback(results){
-	console.log("Results: " + results);
-}
-
-function failCallback(error){
-	console.log("Error: " + error);
-}
+	navigator.speechrecognizer.recognize(successCallback, failCallback, 5, "Cordova Speech Recognizer Plugin");
+	
+	function successCallback(results){
+		console.log("Results: " + results);
+	}
+	
+	function failCallback(error){
+		console.log("Error: " + error);
+	}
