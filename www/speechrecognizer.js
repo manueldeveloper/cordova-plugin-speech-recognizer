@@ -33,9 +33,10 @@ var SpeechRecognizer= function(){
 *
 *	@param {Function} successCallback	function which will receive the results of the recognition process
 *	@param {Function} errorCallbakc		function which will receive the error during the recognitionc process
-*	@param {integer} maxResults			integer with the maximum 
+*	@param {Integer} maxResults		integer with the maximum number of results that the service has to provide
+*     @param {String} promptMessage         string with the prompt message to show through the user interface
 */
-SpeechRecognizer.prototype.recognize= function(successCallback, errorCallback, maxResults, promptMessage{
+SpeechRecognizer.prototype.recognize= function(successCallback, errorCallback, maxResults, promptMessage){
 	return cordova.exec(successCallback, errorCallback, "SpeechRecognizer", "recognize", [maxResults, promptMessage]);
 };
 
