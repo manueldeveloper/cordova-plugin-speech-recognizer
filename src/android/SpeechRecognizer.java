@@ -55,10 +55,10 @@ public class SpeechRecognizer extends CordovaPlugin {
 			// Get the reference to the callbacks and parameters
 			this.speechRecognizerCallbackContext= callbackContext;
 			if( args.length() > 0 ){
-				if( args.getInt(0) > 1 )
+				if( args.getInt(0) >= 1 )
 					maxResults= args.getInt(0);
 				else{
-					callbackContext.error("maxResults argument must be more than 1");
+					callbackContext.error("maxResults argument must to be equal or more than 1");
 					return true;
 				}
 			}			
