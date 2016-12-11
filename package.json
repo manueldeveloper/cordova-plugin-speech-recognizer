@@ -1,0 +1,26 @@
+{
+	"name":"speechrecognizer",
+	"version":"0.0.2",
+	"description":"Cordova plugin which provides a speech recognition service",
+	"cordova":{
+		"id":"com.manueldeveloper.speech-recognizer",
+		"platforms":["android"]
+	},
+	"repository":{
+		"type":"git",
+		"url":"git+https://github.com/manueldeveloper/cordova-plugin-speech-recognizer.git"
+	},
+	"keywords":[
+		"ecosystem:cordova",
+		"cordova-android",
+		"speech",
+		"recognizer",
+		"recognition"
+	],
+	"author": "ManuelDeveloper",
+	"license":"Apache 2.0",
+	"bugs":{
+		"url":"https://github.com/manueldeveloper/cordova-plugin-speech-recognizer/issues"
+	},
+	"homepage":"https://github.com/manueldeveloper/cordova-plugin-speech-recognizer/blob/master/README.md"
+}
